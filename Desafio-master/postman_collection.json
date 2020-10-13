@@ -1,0 +1,260 @@
+{
+	"info": {
+		"_postman_id": "9b53809b-c53d-48b2-8175-ebb4c0622ef3",
+		"name": "Banco Inter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/usuarios",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n   \"nome\": \"Arthur Mapa\",\r\n   \"email\": \"arthurmapati@gmail.com\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios"
+					]
+				},
+				"description": "Serviço para salvar um usuário"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/usuarios/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n   \"nome\": \"Aloisio Mapa\",\r\n   \"email\": \"aloisio.mapa@gmail.com\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuarios/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"1"
+					]
+				},
+				"description": "Serviço para atualizar um usuario."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/usuarios/1/chave-publica",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuarios/1/chave-publica",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"1",
+						"chave-publica"
+					]
+				},
+				"description": "Serviço para recuperar a chave publica do usuário."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/usuarios",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "text/plain",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "Aab4p5xa7NoKDPVzOC9RI0NV7BK+SdYnZUuqzKU4HVbHRVbln3YNIaowtDvOyME0+CLxOLu3Vv8FjbmEdqS5N/09+zYghCQGSciBukCAIxwJrW5DoncZczd1H6qwCRDyFthZaTujaLx/1JDo+keNmqvClgZ+HFMk6WruhHYaWuIQBLYvKSpy3LPrv7yMUGiMUZA/Qi3cB+TvjneJ16MI8c0opgMjSQnRY0z97egoQCc0XsiE9HZeEubAfcTRNORUxCNiABmuNe7x4Z2aTUbGxhMEzRsRmxTSOg9Nid2hOufR6AxvgJZPMB0FHC6MtFglFjOpQQMSQf/qsj7R3OW49Q==",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuarios/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						""
+					]
+				},
+				"description": "Lista todos os usuários cadastrados."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/usuarios/2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuarios/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"2"
+					]
+				},
+				"description": "Serviço para deletar um usuário."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/resultados/digito-unico",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    {\r\n        \"numero\": \"7985\",\r\n        \"multiplicador\": \"4\",\r\n        \"usuarioDTO\":{ \r\n        \t\"nome\": \"Ricardo Ribeiro\", \r\n        \t\"email\":\"ricardo.ferib@gmail.com\"\r\n        }\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/resultados/digito-unico?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"resultados",
+						"digito-unico"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Serviço que calcula o digito unico."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/resultados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/resultados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"resultados"
+					]
+				},
+				"description": "Recupera todos os resultados realizados"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/usuarios/1/resultados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuarios/1/resultados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"1",
+						"resultados"
+					]
+				},
+				"description": "Recupera os resultados realizados pelo usuário."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
